@@ -1,10 +1,10 @@
-install.packages("ggplot2")
-install.packages("plyr")
+# install.packages("ggplot2")
+# install.packages("plyr")
 library(ggplot2)
 library(plyr) # load revalue()
 
 # basic hist
-data <- read.csv(file("r-test/3_ggplot2_intro/office.csv",
+data <- read.csv(file("rba/20160904_rba_3/ggplot2_intro/office.csv",
                       encoding='Shift_JIS'))
 
 ggplot(data, aes(x = office)) + geom_histogram()
@@ -26,7 +26,7 @@ ggplot(data, aes(x = office, fill = division)) +
   geom_histogram(binwidth = 150, position = "identity", alpha = 0.4)
 
 # ex:design theme changes
-install.packages("ggthemes")
+## install.packages("ggthemes")
 require(ggthemes)
 g <- ggplot(data, aes(x = office, fill = division)) +
   geom_histogram(binwidth = 150, position = "identity", alpha = 0.4)
